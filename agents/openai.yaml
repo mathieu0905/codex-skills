@@ -1,0 +1,4 @@
+interface:
+  display_name: "Article Logic Editor"
+  short_description: "Audit article logic from global to line level"
+  default_prompt: "Use $article-logic-editor to revise this article for global coherence, concept order, and section-level consistency."
