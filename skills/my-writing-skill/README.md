@@ -1,4 +1,4 @@
-# Article Logic Editor
+# My Writing Skill
 
 A Codex skill for editing articles, essays, papers, manuscripts, reports, and long-form prose with a whole-document logic audit.
 
@@ -22,11 +22,13 @@ scripts/init_article_audit.py         # creates markdown audit ledgers
 
 ## Install
 
-Clone this repository into your Codex skills folder:
+Clone the skill collection, then symlink this skill into your Codex skills folder:
 
 ```bash
-git clone https://github.com/mathieu0905/article-logic-editor.git \
-  ~/.codex/skills/article-logic-editor
+git clone https://github.com/mathieu0905/codex-skills.git
+cd codex-skills
+mkdir -p ~/.codex/skills
+ln -s "$PWD/skills/my-writing-skill" ~/.codex/skills/my-writing-skill
 ```
 
 ## Usage
@@ -34,13 +36,13 @@ git clone https://github.com/mathieu0905/article-logic-editor.git \
 Inside Codex, ask for article-level revision or invoke the skill explicitly:
 
 ```text
-Use $article-logic-editor to revise this article for global coherence, concept order, and section-level consistency.
+Use $my-writing-skill to revise this article for global coherence, concept order, and section-level consistency.
 ```
 
 To create an audit workspace manually:
 
 ```bash
-python3 ~/.codex/skills/article-logic-editor/scripts/init_article_audit.py \
+python3 ~/.codex/skills/my-writing-skill/scripts/init_article_audit.py \
   --source "pasted-article" \
   --out article-logic-audit
 ```

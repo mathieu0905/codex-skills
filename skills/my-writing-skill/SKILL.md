@@ -1,9 +1,9 @@
 ---
-name: article-logic-editor
+name: my-writing-skill
 description: Edit, review, or rewrite articles, essays, papers, manuscripts, reports, proposals, and long-form prose with a global logic audit. Use when the user asks to improve coherence, argument flow, section order, paragraph transitions, concept introduction order, consistency across sections, claim-evidence alignment, method-limitation correspondence, or when prose sounds locally plausible but globally scattered or self-contradictory. Also use for Chinese requests about 改文章, 文章逻辑, 不连贯, 前后不一致, 概念突然出现, 顺序问题, or 方法和 limitation 不对应.
 ---
 
-# Article Logic Editor
+# My Writing Skill
 
 ## Overview
 

@@ -6,7 +6,7 @@ A collection of Codex skills for research, reviewing, and long-form writing work
 
 | Skill | What it does |
 | --- | --- |
-| `article-logic-editor` | Edits articles, essays, papers, manuscripts, reports, and long-form prose with a whole-document logic audit. |
+| `my-writing-skill` | Edits articles, essays, papers, manuscripts, reports, and long-form prose with a whole-document logic audit. |
 | `llm-tech-report-evaluator` | Evaluates, compares, calibrates, and ranks research papers or LLM/foundation-model technical reports. |
 | `su-paper-revision` | Revises academic papers structurally using SU-style supervisor comment patterns before prose polishing. |
 
@@ -14,7 +14,7 @@ A collection of Codex skills for research, reviewing, and long-form writing work
 
 ```text
 skills/
-  article-logic-editor/
+  my-writing-skill/
     SKILL.md
     agents/openai.yaml
     references/
@@ -45,7 +45,7 @@ Then copy or symlink the skills you want into your Codex skills folder:
 
 ```bash
 mkdir -p ~/.codex/skills
-ln -s "$PWD/skills/article-logic-editor" ~/.codex/skills/article-logic-editor
+ln -s "$PWD/skills/my-writing-skill" ~/.codex/skills/my-writing-skill
 ln -s "$PWD/skills/llm-tech-report-evaluator" ~/.codex/skills/llm-tech-report-evaluator
 ln -s "$PWD/skills/su-paper-revision" ~/.codex/skills/su-paper-revision
 ```
@@ -57,7 +57,7 @@ If a skill with the same name already exists, remove or rename the old folder fi
 Invoke a skill explicitly:
 
 ```text
-Use $article-logic-editor to revise this article for global coherence, concept order, and section-level consistency.
+Use $my-writing-skill to revise this article for global coherence, concept order, and section-level consistency.
 ```
 
 ```text
