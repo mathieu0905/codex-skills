@@ -1,46 +1,59 @@
-# Article Logic Editor
+# Codex Skills
 
-A Codex skill for editing articles, essays, papers, manuscripts, reports, and long-form prose with a whole-document logic audit.
+A collection of Codex skills for research, reviewing, and long-form writing workflows.
 
-## What it does
+## Skills
 
-- **Global coherence audit:** builds an article-level map before polishing sentences.
-- **Forward reading:** reads from the beginning to the end and records what the reader knows at each point.
-- **Concept order tracking:** catches concepts that appear before definition or before the reader has the needed setup.
-- **Claim-evidence alignment:** checks whether claims are supported, overstated, contradicted, or misplaced.
-- **Method-limitation correspondence:** verifies that limitations, methods, evaluation, and conclusions match each other.
-- **Revision planning:** ties each major edit to an explicit audit entry.
+| Skill | What it does |
+| --- | --- |
+| `article-logic-editor` | Edits articles, essays, papers, manuscripts, reports, and long-form prose with a whole-document logic audit. |
+| `llm-tech-report-evaluator` | Evaluates, compares, calibrates, and ranks research papers or LLM/foundation-model technical reports. |
 
 ## Layout
 
 ```text
-SKILL.md                              # skill definition + workflow
-agents/openai.yaml                    # Codex UI metadata
-references/audit-checklists.md        # detailed logic audit prompts
-scripts/init_article_audit.py         # creates markdown audit ledgers
+skills/
+  article-logic-editor/
+    SKILL.md
+    agents/openai.yaml
+    references/
+    scripts/
+  llm-tech-report-evaluator/
+    SKILL.md
+    agents/openai.yaml
+    references/
+    scripts/
 ```
+
+Each directory under `skills/` is a standalone skill folder.
 
 ## Install
 
-Clone this repository into your Codex skills folder:
+Clone the collection:
 
 ```bash
-git clone https://github.com/mathieu0905/article-logic-editor.git \
-  ~/.codex/skills/article-logic-editor
+git clone https://github.com/mathieu0905/codex-skills.git
+cd codex-skills
 ```
 
-## Usage
+Then copy or symlink the skills you want into your Codex skills folder:
 
-Inside Codex, ask for article-level revision or invoke the skill explicitly:
+```bash
+mkdir -p ~/.codex/skills
+ln -s "$PWD/skills/article-logic-editor" ~/.codex/skills/article-logic-editor
+ln -s "$PWD/skills/llm-tech-report-evaluator" ~/.codex/skills/llm-tech-report-evaluator
+```
+
+If a skill with the same name already exists, remove or rename the old folder first.
+
+## Use
+
+Invoke a skill explicitly:
 
 ```text
 Use $article-logic-editor to revise this article for global coherence, concept order, and section-level consistency.
 ```
 
-To create an audit workspace manually:
-
-```bash
-python3 ~/.codex/skills/article-logic-editor/scripts/init_article_audit.py \
-  --source "pasted-article" \
-  --out article-logic-audit
+```text
+Use $llm-tech-report-evaluator to score and compare this paper against nearby accepted work.
 ```

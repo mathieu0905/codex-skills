@@ -6,11 +6,8 @@ __pycache__/
 venv/
 
 # Skill working artifacts
-analysis/
 article-logic-audit/
 audits/
-cache/
-eval_runs/
 outputs/
 *.docx
 *.pdf
