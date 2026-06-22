@@ -1,0 +1,4 @@
+interface:
+  display_name: "SU Paper Revision"
+  short_description: "Structural academic paper revision heuristics"
+  default_prompt: "Use $su-paper-revision to revise this paper section with structural critique before polishing."
