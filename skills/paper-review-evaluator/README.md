@@ -1,6 +1,6 @@
-# LLM Tech Report Evaluator
+# Paper Review Evaluator
 
-A [Claude Code](https://claude.com/claude-code) skill that evaluates, compares, and ranks research papers or LLM / foundation-model technical reports from PDFs (or extracted text). It can also auto-discover same-topic comparison papers from top venues.
+A Codex skill that evaluates, compares, and ranks research papers, submissions, and LLM / foundation-model technical reports from PDFs or extracted text. It can also auto-discover same-topic comparison papers from top venues.
 
 ## What it does
 
@@ -20,11 +20,13 @@ scripts/extract_pdf_reports.py    # PDF → text extraction (PyMuPDF)
 
 ## Install
 
-Drop this directory into your Claude Code skills folder:
+Clone the skill collection, then symlink this skill into your Codex skills folder:
 
 ```bash
-git clone https://github.com/mathieu0905/llm-tech-report-evaluator.git \
-  ~/.claude/skills/llm-tech-report-evaluator
+git clone https://github.com/mathieu0905/codex-skills.git
+cd codex-skills
+mkdir -p ~/.codex/skills
+ln -s "$PWD/skills/paper-review-evaluator" ~/.codex/skills/paper-review-evaluator
 ```
 
 The extraction script needs PyMuPDF:
@@ -35,8 +37,14 @@ pip install pymupdf
 
 ## Usage
 
-Inside Claude Code, just ask Claude to score, compare, rank, or gather comparison papers for a target paper — the skill triggers automatically. To extract PDFs manually:
+Inside Codex, ask to score, compare, rank, or gather comparison papers for a target paper, or invoke the skill explicitly:
+
+```text
+Use $paper-review-evaluator to score and compare this paper against nearby accepted work.
+```
+
+To extract PDFs manually:
 
 ```bash
-python3 ~/.claude/skills/llm-tech-report-evaluator/scripts/extract_pdf_reports.py .
+python3 ~/.codex/skills/paper-review-evaluator/scripts/extract_pdf_reports.py .
 ```

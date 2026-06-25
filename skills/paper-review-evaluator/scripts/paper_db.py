@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Evidence library for the LLM tech report evaluator.
+"""Evidence library for the paper review evaluator.
 
 This SQLite library stores reusable paper material, public review evidence,
 per-run score history, pairwise judgments, anchors, and calibration events.

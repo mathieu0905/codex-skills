@@ -7,7 +7,7 @@ A collection of Codex skills for research, reviewing, and long-form writing work
 | Skill | What it does |
 | --- | --- |
 | `article-logic-editor` | Edits articles, essays, papers, manuscripts, reports, and long-form prose with a whole-document logic audit. |
-| `llm-tech-report-evaluator` | Evaluates, compares, calibrates, and ranks research papers or LLM/foundation-model technical reports. |
+| `paper-review-evaluator` | Evaluates, compares, calibrates, and ranks research papers or LLM/foundation-model technical reports. |
 | `reference-authenticity-auditor` | Verifies reference existence, metadata accuracy, and citation support. |
 | `su-paper-revision` | Revises academic papers structurally using SU-style supervisor comment patterns before prose polishing. |
 
@@ -20,7 +20,7 @@ skills/
     agents/openai.yaml
     references/
     scripts/
-  llm-tech-report-evaluator/
+  paper-review-evaluator/
     SKILL.md
     agents/openai.yaml
     references/
@@ -52,7 +52,7 @@ Then copy or symlink the skills you want into your Codex skills folder:
 ```bash
 mkdir -p ~/.codex/skills
 ln -s "$PWD/skills/article-logic-editor" ~/.codex/skills/article-logic-editor
-ln -s "$PWD/skills/llm-tech-report-evaluator" ~/.codex/skills/llm-tech-report-evaluator
+ln -s "$PWD/skills/paper-review-evaluator" ~/.codex/skills/paper-review-evaluator
 ln -s "$PWD/skills/reference-authenticity-auditor" ~/.codex/skills/reference-authenticity-auditor
 ln -s "$PWD/skills/su-paper-revision" ~/.codex/skills/su-paper-revision
 ```
@@ -68,7 +68,7 @@ Use $article-logic-editor to revise this article for global coherence, concept o
 ```
 
 ```text
-Use $llm-tech-report-evaluator to score and compare this paper against nearby accepted work.
+Use $paper-review-evaluator to score and compare this paper against nearby accepted work.
 ```
 
 ```text
