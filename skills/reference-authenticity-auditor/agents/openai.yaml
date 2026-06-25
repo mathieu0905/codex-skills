@@ -1,0 +1,4 @@
+interface:
+  display_name: "Reference Authenticity Auditor"
+  short_description: "Verify citations and reference authenticity"
+  default_prompt: "Use $reference-authenticity-auditor to audit this manuscript's references for authenticity, metadata accuracy, and citation support."
