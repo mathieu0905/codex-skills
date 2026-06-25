@@ -1,4 +1,0 @@
-interface:
-  display_name: "My Writing Skill"
-  short_description: "Audit writing logic from global to line level"
-  default_prompt: "Use $my-writing-skill to revise this article for global coherence, concept order, and section-level consistency."

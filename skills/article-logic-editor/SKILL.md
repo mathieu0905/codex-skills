@@ -1,17 +1,18 @@
 ---
-name: my-writing-skill
+name: article-logic-editor
 description: Edit, review, or rewrite articles, essays, papers, manuscripts, reports, proposals, and long-form prose with a global logic audit. Use when the user asks to improve coherence, argument flow, section order, paragraph transitions, concept introduction order, consistency across sections, claim-evidence alignment, method-limitation correspondence, or when prose sounds locally plausible but globally scattered or self-contradictory. Also use for Chinese requests about 改文章, 文章逻辑, 不连贯, 前后不一致, 概念突然出现, 顺序问题, or 方法和 limitation 不对应.
 ---
 
-# My Writing Skill
+# Article Logic Editor
 
 ## Overview
 
-Use this skill to revise long-form writing from a whole-document perspective while still reading from front to back. Maintain explicit audit notes so the article's thesis, concepts, claims, methods, limitations, and unresolved questions stay visible throughout the edit.
+Use this skill to revise long-form writing from a whole-document perspective while still reading from front to back. Maintain an explicit reader notebook so the agent's understanding evolves in document order and logical jumps, contradictions, and premature concepts remain visible.
 
 ## Non-Negotiables
 
 - Do not start by polishing sentences. First build a document-level understanding and a forward-reading audit trail.
+- Read in order and update the reader notebook after each paragraph or paragraph group. Do not wait until the end and reconstruct a clean outline from hindsight.
 - Treat every paragraph as doing a job in an argument. If the job is unclear, overlapping, misplaced, or unsupported, record that before rewriting.
 - Track introduced concepts, promised contributions, evidence, assumptions, limitations, and open loops. Do not let later edits contradict earlier commitments.
 - Preserve the author's intended claims unless the user asks for a stronger rewrite. When changing claims, make the logic for the change explicit.
@@ -35,12 +36,13 @@ Use these files as living notes:
 
 - `00-reading-protocol.md`: task framing and reading rules.
 - `01-global-map.md`: thesis, audience, contribution, section-level argument map.
-- `02-forward-reading-log.md`: paragraph-by-paragraph observations in document order.
-- `03-concept-ledger.md`: first mentions, definitions, dependencies, unexplained jumps.
-- `04-claim-evidence-ledger.md`: claims, evidence, support status, contradictions.
-- `05-method-limitation-ledger.md`: method promises, evaluation coverage, limitations, unmatched items.
-- `06-revision-plan.md`: prioritized edits tied to audit evidence.
-- `07-final-consistency-pass.md`: final checks after editing.
+- `02-reader-notes.md`: evolving reader-state notes after each paragraph or paragraph group.
+- `03-forward-reading-log.md`: paragraph-by-paragraph observations in document order.
+- `04-concept-ledger.md`: first mentions, definitions, dependencies, unexplained jumps.
+- `05-claim-evidence-ledger.md`: claims, evidence, support status, contradictions.
+- `06-method-limitation-ledger.md`: method promises, evaluation coverage, limitations, unmatched items.
+- `07-revision-plan.md`: prioritized edits tied to audit evidence.
+- `08-final-consistency-pass.md`: final checks after editing.
 
 For short texts, a compact in-message version of the same ledgers is acceptable, but still reason in this order.
 
@@ -69,9 +71,22 @@ Read the title, abstract/introduction, headings, conclusion, and any explicit co
 
 This pass is provisional. Mark uncertain items as hypotheses, not facts.
 
-### 3. Second Pass: Forward Reading Log
+### 3. Second Pass: Reader Notebook
 
-Read from the beginning to the end without jumping around to patch individual sentences. For each paragraph or small paragraph group, record:
+Read from the beginning to the end without jumping around to patch individual sentences. After each paragraph or small paragraph group, update `02-reader-notes.md` before updating any other ledger. Record:
+
+- what the reader currently thinks the article is about;
+- what claim, concept, or problem has become clearer;
+- what the reader now expects the article to explain next;
+- what remains confusing, unsupported, or prematurely introduced;
+- whether the new paragraph changes, narrows, or contradicts the earlier understanding;
+- what revision implication follows if the issue persists.
+
+Use the notebook as an append-only record of the reading experience. If a later paragraph resolves an earlier confusion, mark the resolution at the later location instead of deleting the earlier confusion. This preserves the fact that the article made the reader wait.
+
+### 4. Forward Reading Log
+
+For each paragraph or small paragraph group, record:
 
 - current paragraph's job;
 - what it depends on from earlier text;
@@ -81,7 +96,7 @@ Read from the beginning to the end without jumping around to patch individual se
 
 Update the concept, claim-evidence, and method-limitation ledgers as soon as each item appears. This prevents later reasoning from erasing the reader's actual experience of encountering the text in order.
 
-### 4. Diagnose Global Failures
+### 5. Diagnose Global Failures
 
 Use `references/audit-checklists.md` when the issue is subtle or the text is long. Classify problems by type:
 
@@ -94,9 +109,9 @@ Use `references/audit-checklists.md` when the issue is subtle or the text is lon
 - **Method-limitation mismatch**: a limitation is named but not reflected in method/evaluation, or the method claims to solve an issue that the limitation section later admits remains open.
 - **Conclusion drift**: the final takeaway no longer matches the evidence or scope of the article.
 
-### 5. Build The Revision Plan
+### 6. Build The Revision Plan
 
-Write `06-revision-plan.md` before editing. Group changes by priority:
+Write `07-revision-plan.md` before editing. Group changes by priority:
 
 - **P0: argument integrity**: contradictions, missing prerequisites, wrong claims, unsupported core conclusions.
 - **P1: structure and sequence**: section order, paragraph order, roadmap, topic progression.
@@ -105,7 +120,7 @@ Write `06-revision-plan.md` before editing. Group changes by priority:
 
 Every planned edit should cite the relevant audit file entry. If an edit cannot be tied to a recorded logical issue, treat it as optional style work.
 
-### 6. Revise
+### 7. Revise
 
 Make edits in the lowest-risk form appropriate to the user's request:
 
@@ -121,9 +136,9 @@ When rewriting, move from structure to paragraphs to sentences:
 4. Improve transitions and topic sentences.
 5. Polish wording only after the structure works.
 
-### 7. Final Consistency Pass
+### 8. Final Consistency Pass
 
-After revision, read the edited article's skeleton again: title, abstract/introduction, headings, topic sentences, conclusion, and limitation/future-work sections. Fill `07-final-consistency-pass.md` and verify:
+After revision, read the edited article's skeleton again: title, abstract/introduction, headings, topic sentences, conclusion, and limitation/future-work sections. Fill `08-final-consistency-pass.md` and verify:
 
 - all important concepts are introduced before use;
 - terminology stays stable;
@@ -148,4 +163,4 @@ Do not overwhelm the user with the full audit workspace unless they ask for it. 
 ## Resources
 
 - `scripts/init_article_audit.py`: create the audit workspace and markdown ledgers.
-- `references/audit-checklists.md`: detailed prompts for global coherence, forward reading, concept order, and correspondence checks.
+- `references/audit-checklists.md`: detailed prompts for reader-state notes, global coherence, forward reading, concept order, and correspondence checks.

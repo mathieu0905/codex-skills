@@ -49,29 +49,49 @@ FILES = {
 
 - 
 """,
-    "02-forward-reading-log.md": """# Forward Reading Log
+    "02-reader-notes.md": """# Reader Notes
+
+Use this as an append-only reading notebook. Update it after each paragraph or paragraph group before diagnosing or rewriting. Preserve earlier confusion even if later text resolves it.
+
+## Running Understanding
+
+Update this section as the reader's understanding changes.
+
+- Current thesis as understood:
+- Main problem or stakes:
+- Key concepts understood so far:
+- Evidence accumulated so far:
+- Promises the article still owes:
+- Active confusions or possible contradictions:
+
+## Chronological Notes
+
+| Location | Current understanding after reading this part | New concept/claim introduced | Reader expectation created | Confusion, jump, or contradiction | Later resolved? | Revision implication |
+| --- | --- | --- | --- | --- | --- | --- |
+""",
+    "03-forward-reading-log.md": """# Forward Reading Log
 
 Read in document order. Add one row per paragraph or paragraph group.
 
 | Location | Paragraph job | Depends on earlier text | Introduces for later | Issue observed | Severity |
 | --- | --- | --- | --- | --- | --- |
 """,
-    "03-concept-ledger.md": """# Concept Ledger
+    "04-concept-ledger.md": """# Concept Ledger
 
 | Concept | First mention | First definition | Prerequisites | Later usage | Issue | Fix |
 | --- | --- | --- | --- | --- | --- | --- |
 """,
-    "04-claim-evidence-ledger.md": """# Claim-Evidence Ledger
+    "05-claim-evidence-ledger.md": """# Claim-Evidence Ledger
 
 | Claim | Location | Evidence or reasoning | Support status | Scope problem | Contradiction | Fix |
 | --- | --- | --- | --- | --- | --- | --- |
 """,
-    "05-method-limitation-ledger.md": """# Method-Limitation Ledger
+    "06-method-limitation-ledger.md": """# Method-Limitation Ledger
 
 | Method/design choice | Problem addressed | Evidence coverage | Limitation | Match status | Required revision |
 | --- | --- | --- | --- | --- | --- |
 """,
-    "06-revision-plan.md": """# Revision Plan
+    "07-revision-plan.md": """# Revision Plan
 
 ## P0: Argument Integrity
 
@@ -94,7 +114,7 @@ Read in document order. Add one row per paragraph or paragraph group.
 | Edit | Audit evidence | Expected effect | Risk |
 | --- | --- | --- | --- |
 """,
-    "07-final-consistency-pass.md": """# Final Consistency Pass
+    "08-final-consistency-pass.md": """# Final Consistency Pass
 
 | Check | Pass/Fail | Notes |
 | --- | --- | --- |

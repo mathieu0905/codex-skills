@@ -13,6 +13,30 @@ Ask these questions while reading from front to back:
 - Is that question answered soon enough to keep trust?
 - Does this paragraph make the next paragraph feel necessary?
 
+## Reader Notebook Protocol
+
+Use `02-reader-notes.md` to track the article as a reader experiences it in real time. The notebook is not a final outline. It is a chronological record of how understanding forms, changes, stalls, or breaks.
+
+After each paragraph or paragraph group, write:
+
+- current understanding: what the article appears to be arguing now;
+- delta: what changed since the previous note;
+- expectation: what the reader now expects the article to explain or prove;
+- debt: what concept, claim, evidence, or definition the article now owes;
+- tension: what seems inconsistent with earlier text;
+- revision implication: what would need to move, narrow, define, or bridge if the issue remains.
+
+Use these labels for reader-state failures:
+
+- premature-use: a term, claim, method, or result is used before the reader can understand it;
+- expectation-break: the article creates an expectation and then changes direction without explanation;
+- delayed-resolution: the article eventually explains something, but too late for the earlier passage to work;
+- understanding-reset: a later paragraph forces the reader to reinterpret earlier material;
+- contradiction-candidate: the current claim appears to conflict with an earlier claim, scope, or definition;
+- unsupported-confidence: the reader is asked to believe a conclusion before evidence is available.
+
+When a later passage resolves a problem, add a later note saying so. Do not erase the earlier problem; the delay itself may be the issue.
+
 ## Paragraph Job Types
 
 Assign each paragraph one primary job:
