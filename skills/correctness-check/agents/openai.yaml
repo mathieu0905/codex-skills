@@ -1,0 +1,4 @@
+interface:
+  display_name: "Correctness Check"
+  short_description: "Verify claims against evidence"
+  default_prompt: "Use $correctness-check to verify this paper's load-bearing claims against its evidence."

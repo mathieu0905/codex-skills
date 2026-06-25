@@ -7,6 +7,8 @@ A collection of Codex skills for research, reviewing, and long-form writing work
 | Skill | What it does |
 | --- | --- |
 | `article-logic-editor` | Edits articles, essays, papers, manuscripts, reports, and long-form prose with a whole-document logic audit. |
+| `correctness-check` | Audits paper correctness by extracting load-bearing claims and verifying them against internal and external evidence. |
+| `idea-check` | Maps research ideas, abstracts, or drafts against close prior work to identify positioning, novelty deltas, and gaps. |
 | `paper-review-evaluator` | Evaluates, compares, calibrates, and ranks research papers or LLM/foundation-model technical reports. |
 | `reference-authenticity-auditor` | Verifies reference existence, metadata accuracy, and citation support. |
 | `su-paper-revision` | Revises academic papers structurally using SU-style supervisor comment patterns before prose polishing. |
@@ -20,6 +22,14 @@ skills/
     agents/openai.yaml
     references/
     scripts/
+  correctness-check/
+    SKILL.md
+    agents/openai.yaml
+    references/
+  idea-check/
+    SKILL.md
+    agents/openai.yaml
+    references/
   paper-review-evaluator/
     SKILL.md
     agents/openai.yaml
@@ -52,6 +62,8 @@ Then copy or symlink the skills you want into your Codex skills folder:
 ```bash
 mkdir -p ~/.codex/skills
 ln -s "$PWD/skills/article-logic-editor" ~/.codex/skills/article-logic-editor
+ln -s "$PWD/skills/correctness-check" ~/.codex/skills/correctness-check
+ln -s "$PWD/skills/idea-check" ~/.codex/skills/idea-check
 ln -s "$PWD/skills/paper-review-evaluator" ~/.codex/skills/paper-review-evaluator
 ln -s "$PWD/skills/reference-authenticity-auditor" ~/.codex/skills/reference-authenticity-auditor
 ln -s "$PWD/skills/su-paper-revision" ~/.codex/skills/su-paper-revision
@@ -65,6 +77,14 @@ Invoke a skill explicitly:
 
 ```text
 Use $article-logic-editor to revise this article for global coherence, concept order, and section-level consistency.
+```
+
+```text
+Use $idea-check to map this research idea against close prior work and identify defensible gaps.
+```
+
+```text
+Use $correctness-check to verify this paper's load-bearing claims against its evidence.
 ```
 
 ```text

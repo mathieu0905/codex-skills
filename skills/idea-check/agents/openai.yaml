@@ -1,0 +1,4 @@
+interface:
+  display_name: "Idea Check"
+  short_description: "Map an idea against prior work"
+  default_prompt: "Use $idea-check to map this research idea against close prior work and identify defensible gaps."
